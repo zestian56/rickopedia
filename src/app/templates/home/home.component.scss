@@ -1,0 +1,24 @@
+:host {
+    width: 100%;
+    height: 50vh;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    .characters{
+        width: 100%;
+        flex-flow:row wrap;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .actions {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+}
