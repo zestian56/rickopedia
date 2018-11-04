@@ -1,0 +1,26 @@
+<mat-card class="card">
+  <img [src]="character.image" [alt]="character.name">
+  <div class="info">
+    <span class="name">
+      {{character.name}}
+    </span>
+    <span class="status" [ngClass]="{ alive: character.status ==='Alive',
+      unknown: character.status ==='unknown'}">
+      {{character.status}}
+    </span>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ex
+      nec magna vestibulum, nec euismod elit facilisis. Donec nec odio dui. In
+      rhoncus tempor nibh sit amet vulputate. Vestibulum quis lacus sit amet
+      diam venenatis placerat. Morbi blandit, est a commodo volutpat, nunc
+      mauris tincidunt lorem, id porta nulla erat et mi. Nulla elementum diam
+      nisi, et hendrerit urna ultrices nec. Donec dignissim justo in nisi
+      lacinia dapibus. Quisque orci libero, accumsan quis ipsum vel, sodales
+      fringilla sem. Fusce sollicitudin tellus urna, a congue lorem efficitur
+      maximus. Integer imperdiet enim a ligula scelerisque suscipit. Donec
+      interdum, ante nec placerat bibendum, lorem velit tincidunt turpis, sed
+      condimentum dolor massa eget elit. Ut congue massa ipsum, sed interdum dui
+      ornare faucibus. Curabitur non suscipit nisl, at imperdiet purus.
+    </p>
+  </div>
+</mat-card>

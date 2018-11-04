@@ -1,3 +1,4 @@
+import { Character } from './../../common/classes/character';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./character-summary.component.scss']
 })
 export class CharacterSummaryComponent implements OnInit {
-  @Input() imgUrl :string;
+  @Input() character: Character;
   constructor() { }
 
   ngOnInit() {

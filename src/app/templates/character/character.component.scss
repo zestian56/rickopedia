@@ -1,0 +1,57 @@
+$image-size: 15rem;
+$image-size: 15rem;
+:host {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .card {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: $image-size;
+            height: $image-size;
+            margin: 0 1rem;
+            border-radius: 10px;
+            @media (max-width: 786px) {
+                width: 100%;
+                height:auto;
+                margin: 2rem 0;
+            }
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+            .name {
+                font-weight: 500;
+            }
+            .status {
+                font-weight: 400;
+                font-size: 0.9em;
+                color: red;
+                text-transform: capitalize;
+                &.alive {
+                    color: green;
+                }
+                &.unknown {
+                    color: gray;
+                }
+            }
+            .description {
+                font-size: 0.7em;
+                margin: 1rem 0;
+                text-align: justify;
+            }
+            @media (max-width: 786px) {
+                font-size: 1.3rem;
+                width: 100%;
+            }
+        }
+    }
+}

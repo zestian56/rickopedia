@@ -1,3 +1,5 @@
- <mat-card>
-  <img mat-card-sm-image [src]="imgUrl" alt="">
+ <mat-card class="card" routerLink="/detail" [queryParams]="{
+  id: character.id
+  }">
+  <img mat-card-sm-image [src]="character.image" [alt]="character.name">
 </mat-card>
