@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
     this.characterService.getCharactersArray(ids).subscribe(response => {
       this.arrCharacters = response;
       this.blIsLoading = false;
-    });
+    }, err => this.blIsLoading = false);
   }
   /**
    * getRandomId

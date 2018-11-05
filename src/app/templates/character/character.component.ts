@@ -52,7 +52,7 @@ export class CharacterComponent implements OnInit {
     this.characterService.getCharacter(id).subscribe(response => {
       this.character = response;
       this.blIsLoading = false;
-    });
+    },err => this.blIsLoading= false);
   }
   /**
   *  ngOnInit

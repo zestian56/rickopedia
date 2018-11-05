@@ -1,6 +1,9 @@
 $card-size: 13em;
 :host {
     flex-shrink: 1;
+    @media (max-width: 786px) {
+        flex-grow:1;
+    }
     .card {
         margin: 1em;
         width: $card-size;

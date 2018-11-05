@@ -1,27 +1,20 @@
 # Rickopedia
+Una enciclopedia con todos los personajes de Rick y Morty recuperados de [Rick and Morty API](https://rickandmortyapi.com/) y creado para ser presentado como prueba en DevHack.
+Este proyecto fue generado usando la [Angular CLI](https://github.com/angular/angular-cli) versión 7.0.4.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
+## Comenzando
 
-## Development server
+Ejecuta el comando `ng serve` para desplegar la aplicación en un servidor de desarrollo en `http://localhost:4200/`. La aplicación automaticamente se actualizara si se hace algun cambio a los archivos de origen.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Pre-requisitos 📋
+```
+ nodejs
+ yarn o npm
+ @angular/cli v7.0.4
+```
+##Deployment
 
-## Code scaffolding
+Este proyecto fue exportado en la versión de producción de angular utilizando `ng build --prod` y alojado en firebase hosting:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[Firebase Hosting](https://rickopedia-5fa15.firebaseapp.com)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

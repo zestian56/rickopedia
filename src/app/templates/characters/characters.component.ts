@@ -58,7 +58,7 @@ Descripción: Número de total de personajes en el endPoint. Extraido de la docu
     this.characterService.getCharactersPaginated(page).subscribe(response => {
       this.arrCharacters = this.arrCharacters.concat(response.results)
       this.blIsLoading = false;
-    });
+    },err => this.blIsLoading= false);
   }
   /**
    * onScroll
