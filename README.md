@@ -12,7 +12,7 @@ Ejecuta el comando `ng serve` para desplegar la aplicación en un servidor de de
  yarn o npm
  @angular/cli v7.0.4
 ```
-##Deployment
+## Deployment
 
 Este proyecto fue exportado en la versión de producción de angular utilizando `ng build --prod` y alojado en firebase hosting:
 
