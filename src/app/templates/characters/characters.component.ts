@@ -13,15 +13,17 @@ export class CharactersComponent implements OnInit {
   numCurrentPage: number = 0;
   blCompleted: boolean = false;
   numTotalCharas: number = 492;
+  blIsLoading: boolean = false;
   constructor(private characterService: CharacterService) { }
 
   getCharacters(page: number): void {
+    this.blIsLoading = true;
     this.characterService.getCharactersPaginated(page).subscribe(response => {
       this.arrCharacters = this.arrCharacters.concat(response.results)
+      this.blIsLoading = false;
     });
   }
   onScroll() {
-    console.log(this.arrCharacters.length)
     if (this.arrCharacters.length <= this.numTotalCharas) {
       this.numCurrentPage++;
       this.getCharacters(this.numCurrentPage);

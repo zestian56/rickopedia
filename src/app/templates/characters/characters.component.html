@@ -6,6 +6,8 @@
     class="character"
     [character]="character"></app-character-summary>
 </div>
+<mat-progress-spinner color="primary" mode="indeterminate" *ngIf="blIsLoading">
+</mat-progress-spinner>
 <div *ngIf="blCompleted" class="warning">
   No hay más entradas
 </div>

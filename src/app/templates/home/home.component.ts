@@ -8,18 +8,19 @@ import { Character } from 'src/app/common/classes/character';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   arrCharacters: Character[] = [];
-  numTotalCharas : number =  492;
+  numTotalCharas: number = 492;
+  blIsLoading: boolean = false;
   constructor(private characterService: CharacterService) { }
-
   ngOnInit() {
     const randomIds = [this.getRandomId(), this.getRandomId(), this.getRandomId()]
     this.getCharacters(randomIds);
   }
   getCharacters(ids: string[]): void {
+    this.blIsLoading = true;
     this.characterService.getCharactersArray(ids).subscribe(response => {
       this.arrCharacters = response;
+      this.blIsLoading = false;
     });
   }
   getRandomId(): string {

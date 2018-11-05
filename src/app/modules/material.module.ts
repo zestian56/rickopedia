@@ -6,7 +6,8 @@ import {
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule
 } from '@angular/material';
 
 @NgModule({
@@ -17,7 +18,8 @@ import {
         MatSidenavModule,
         MatIconModule,
         MatListModule,
-        MatCardModule
+        MatCardModule,
+        MatProgressSpinnerModule
     ],
     exports: [
         BrowserAnimationsModule,
@@ -26,7 +28,8 @@ import {
         MatSidenavModule,
         MatIconModule,
         MatListModule,
-        MatCardModule
+        MatCardModule,
+        MatProgressSpinnerModule
     ],
 
 })

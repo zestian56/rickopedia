@@ -1,4 +1,4 @@
-<mat-card class="card">
+<mat-card class="card" *ngIf="!blIsLoading">
   <img [src]="character.image" [alt]="character.name">
   <div class="info">
     <span class="name">
@@ -24,3 +24,5 @@
     </p>
   </div>
 </mat-card>
+<mat-progress-spinner color="primary" mode="indeterminate" *ngIf="blIsLoading">
+</mat-progress-spinner>

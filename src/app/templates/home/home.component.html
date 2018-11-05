@@ -1,6 +1,11 @@
-<div class="characters">
-    <app-character-summary *ngFor="let character of arrCharacters" [character]="character"></app-character-summary>
+<div class="characters" *ngIf="!blIsLoading">
+    <app-character-summary *ngFor="let character of arrCharacters"
+        [character]="character"></app-character-summary>
 </div>
+<mat-progress-spinner color="primary" mode="indeterminate" *ngIf="blIsLoading">
+</mat-progress-spinner>
 <div class="actions">
-    <button mat-raised-button color="primary" routerLink="/characters"> VER TODOS...</button>
+    <button mat-raised-button color="primary" routerLink="/characters"
+        *ngIf="!blIsLoading"> VER
+        TODOS...</button>
 </div>
