@@ -1,9 +1,9 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-    [ngClass]="{hidden: !(isHandset$ | async)}"
-    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="!(isHandset$ | async)">
+    [ngClass]="{hidden: !(blIsHandset$ | async)}"
+    [attr.role]="(blIsHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(blIsHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(blIsHandset$ | async)">
     <mat-toolbar>Navegación</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/home">Home</a>
@@ -17,13 +17,13 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+        *ngIf="blIsHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span *ngIf="(isHandset$ | async)">Rickopedia</span>
-      <a *ngIf="!(isHandset$ | async)" mat-list-item routerLink="/home"
+      <span *ngIf="(blIsHandset$ | async)">Rickopedia</span>
+      <a *ngIf="!(blIsHandset$ | async)" mat-list-item routerLink="/home"
         routerLinkActive="active">Home</a>
-      <a *ngIf="!(isHandset$ | async)" mat-list-item routerLink="/characters"
+      <a *ngIf="!(blIsHandset$ | async)" mat-list-item routerLink="/characters"
         routerLinkActive="active">Personajes</a>
     </mat-toolbar>
     <ng-content> </ng-content>

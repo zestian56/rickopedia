@@ -1,24 +1,24 @@
-$card-size: 13rem;
-$card-size-sm: 25rem;
+$card-size: 13em;
 :host {
-    margin: 1rem;
-    transition: box-shadow 0.3s cubic-bezier(.25, .8, .25, 1);
     flex-shrink: 1;
     .card {
+        margin: 1em;
         width: $card-size;
         height: $card-size;
+        transition: box-shadow 0.3s cubic-bezier(.25, .8, .25, 1);
         img {
             width: 100%;
             height: 100%;
             border-radius: 10px;
         }
         @media (max-width: 786px) {
-            width: $card-size-sm;
-            height: $card-size-sm;
+            width: 100%;
+            height: auto;
+            margin: 1em 0;
         }
-    }
-    &:hover {
-        cursor: pointer;
-        box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.1);
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.1);
+        }
     }
 }

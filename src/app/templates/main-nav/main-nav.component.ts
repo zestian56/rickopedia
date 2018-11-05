@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 })
 export class MainNavComponent {
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  blIsHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
     );

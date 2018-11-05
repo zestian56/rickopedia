@@ -1,0 +1,13 @@
+:host {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    .grid {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        .character {
+            font-size: 0.6rem;
+        }
+    }
+}

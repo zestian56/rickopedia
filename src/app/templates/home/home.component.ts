@@ -9,7 +9,7 @@ import { Character } from 'src/app/common/classes/character';
 })
 export class HomeComponent implements OnInit {
 
-  characters: Character[] = [];
+  arrCharacters: Character[] = [];
 
   constructor(private characterService: CharacterService) { }
 
@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   }
   getCharacters(ids: string[]): void {
     this.characterService.getCharactersArray(ids).subscribe(response => {
-      this.characters = response;
+      this.arrCharacters = response;
     });
   }
   getRandomId(): string {

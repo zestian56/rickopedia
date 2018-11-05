@@ -12,6 +12,7 @@ import { MainNavComponent } from './templates/main-nav/main-nav.component';
 import { HomeComponent } from './templates/home/home.component';
 import { CharacterSummaryComponent } from './components/character-summary/character-summary.component';
 import { CharacterComponent } from './templates/character/character.component';
+import { CharactersComponent } from './templates/characters/characters.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CharacterComponent } from './templates/character/character.component';
     MainNavComponent,
     HomeComponent,
     CharacterSummaryComponent,
-    CharacterComponent
+    CharacterComponent,
+    CharactersComponent
   ],
   imports: [
     BrowserModule,
