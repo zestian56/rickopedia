@@ -6,7 +6,7 @@ import { HttpClientModule } from "@angular/common/http";
 
 import { MaterialModule } from './modules/material.module';
 import { AppRoutingModule } from './modules/app-routing.module';
-
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './templates/main-nav/main-nav.component';
 import { HomeComponent } from './templates/home/home.component';
@@ -29,7 +29,8 @@ import { CharactersComponent } from './templates/characters/characters.component
     AppRoutingModule,
     MaterialModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    InfiniteScrollModule
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]

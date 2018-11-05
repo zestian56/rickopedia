@@ -8,18 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./characters.component.scss']
 })
 export class CharactersComponent implements OnInit {
-  
-  arrCharacters: Character[];
+
+  arrCharacters: Character[] = [];
   numCurrentPage: number = 0;
+  blCompleted: boolean = false;
+  numTotalCharas: number = 492;
   constructor(private characterService: CharacterService) { }
 
   getCharacters(page: number): void {
     this.characterService.getCharactersPaginated(page).subscribe(response => {
-      this.arrCharacters = [...response.results]
+      this.arrCharacters = this.arrCharacters.concat(response.results)
     });
   }
   onScroll() {
-    console.log('llegue al final')
+    console.log(this.arrCharacters.length)
+    if (this.arrCharacters.length <= this.numTotalCharas) {
+      this.numCurrentPage++;
+      this.getCharacters(this.numCurrentPage);
+    } else {
+      this.blCompleted = true;
+    }
   }
   ngOnInit() {
     this.getCharacters(this.numCurrentPage);

@@ -10,7 +10,7 @@ import { Character } from 'src/app/common/classes/character';
 export class HomeComponent implements OnInit {
 
   arrCharacters: Character[] = [];
-
+  numTotalCharas : number =  492;
   constructor(private characterService: CharacterService) { }
 
   ngOnInit() {
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     });
   }
   getRandomId(): string {
-    return Math.round((Math.random() * 182) + 1).toString();
+    return Math.round((Math.random() * 492) + 1).toString();
   }
 
 }

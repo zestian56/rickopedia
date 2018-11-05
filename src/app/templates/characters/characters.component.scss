@@ -2,6 +2,7 @@
     padding: 2rem;
     flex-grow: 1;
     display: flex;
+    flex-direction:column;
     .grid {
         display: flex;
         flex-flow: row wrap;
@@ -9,5 +10,9 @@
         .character {
             font-size: 0.6rem;
         }
+    }
+    .warning {
+         display: flex;
+         justify-content: center;
     }
 }
